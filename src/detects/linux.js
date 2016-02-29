@@ -1,0 +1,1 @@
+Useragnt.linux = m("linux") && !m("android");

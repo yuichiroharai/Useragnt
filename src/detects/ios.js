@@ -1,0 +1,1 @@
+Useragnt.ios = m("iphone") || m("ipad") || m("ipod");

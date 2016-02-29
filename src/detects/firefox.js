@@ -1,0 +1,1 @@
+Useragnt.firefox = m("firefox") && !m("edge");

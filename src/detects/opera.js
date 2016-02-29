@@ -1,0 +1,1 @@
+Useragnt.opera = m("opera") || m("opr");

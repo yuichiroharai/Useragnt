@@ -1,0 +1,24 @@
+{
+  "classPrefix": "",
+  "options": [
+    "setClasses"
+  ],
+  "uaDetects": [
+    "mobile",
+    "tablet",
+    "pc",
+
+    "windows",
+    "mac",
+    "linux",
+    "ios",
+    "android",
+
+    "edge",
+    "ie",
+    "safari",
+    "chrome",
+    "firefox",
+    "opera"
+  ]
+}

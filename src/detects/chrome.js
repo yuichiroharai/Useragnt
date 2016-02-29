@@ -1,0 +1,1 @@
+Useragnt.chrome = m("chrome") && !m("edge") && !m("opera") && !m("opr");

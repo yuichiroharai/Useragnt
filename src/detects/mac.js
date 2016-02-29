@@ -1,0 +1,1 @@
+Useragnt.mac = m("mac os x") && !m("iphone") && !m("ipad") && !m("ipod");
