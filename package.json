@@ -1,0 +1,27 @@
+{
+  "name": "useragnt",
+  "version": "0.1.0",
+  "description": "Useragnt is a JavaScript library that detects device, OS, and browser from Useragent. It behaves like a Modernizr.",
+  "main": "./src/build.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://yuichiroharai@github.com/yuichiroharai/Useragnt.git"
+  },
+  "author": {
+    "name": "Yuichiroh Arai",
+    "url": "http://www.yuichiroharai.com/"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yuichiroharai/Useragnt/issues"
+  },
+  "homepage": "https://github.com/yuichiroharai/Useragnt#readme",
+  "dependencies": {
+    "lodash": "^4.5.1",
+    "uglify-js": "^2.6.2"
+  },
+  "private": "true"
+}
