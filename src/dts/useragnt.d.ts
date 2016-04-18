@@ -1,4 +1,4 @@
-// Type definitions for Useragnt 0.1.0
+// Type definitions for Useragnt 0.1.1
 // Project: https://github.com/yuichiroharai/Useragnt
 // Definitions by: Yuichiroh Arai <https://github.com/yuichiroharai/>
 // Definitions: https://github.com/yuichiroharai/Useragnt
@@ -6,6 +6,8 @@
 declare namespace __Useragnt {
 
     interface UADetects {
+        userAgent: string;
+
         mobile: boolean;
         tablet: boolean;
         pc: boolean;
