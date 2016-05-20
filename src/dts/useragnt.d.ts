@@ -5,6 +5,18 @@
 
 declare namespace __Useragnt {
 
+    interface UADetectsVersion {
+        float: number;
+        major: number;
+        minor: number;
+        build: number;
+        revision: number;
+    }
+
+    interface UADetectsBooleanVersion extends Boolean {
+        version: UADetectsVersion;
+    }
+
     interface UADetects {
         userAgent: string;
 
@@ -15,8 +27,8 @@ declare namespace __Useragnt {
         windows: boolean;
         mac: boolean;
         linux: boolean;
-        ios: boolean;
-        android: boolean;
+        ios: UADetectsBooleanVersion;
+        android: UADetectsBooleanVersion;
 
         edge: boolean;
         ie: boolean;

@@ -73,6 +73,23 @@ if (Useragnt.pc) {
 } else {
   //...
 }
+
+// iOS & Android only
+var version;
+if (Useragnt.ios) {
+    version = Useragnt.ios.version;
+    console.log("iOS version: " + version.float); // major.minor
+    console.log("major:" + version.major);
+    console.log("minor:" + version.minor);
+    console.log("build:" + version.build);
+}
+if (Useragnt.android) {
+    version = Useragnt.android.version;
+    console.log("Android version: " + version.float); // major.minor
+    console.log("major:" + version.major);
+    console.log("minor:" + version.minor);
+    console.log("build:" + version.build);
+}
 ```
 
 
