@@ -1,4 +1,4 @@
-// Type definitions for Useragnt 0.1.1
+// Type definitions for Useragnt 0.2.0
 // Project: https://github.com/yuichiroharai/Useragnt
 // Definitions by: Yuichiroh Arai <https://github.com/yuichiroharai/>
 // Definitions: https://github.com/yuichiroharai/Useragnt
