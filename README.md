@@ -94,4 +94,4 @@ if (Useragnt.android) {
 
 
 ## Example
-http://codepen.io/yuichiroharai/pen/wMPWEJ
+http://codepen.io/yuichiroharai/pen/zqjLJL
