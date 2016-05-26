@@ -1,4 +1,4 @@
-// Type definitions for Useragnt 0.2.0
+// Type definitions for Useragnt 0.3.0
 // Project: https://github.com/yuichiroharai/Useragnt
 // Definitions by: Yuichiroh Arai <https://github.com/yuichiroharai/>
 // Definitions: https://github.com/yuichiroharai/Useragnt
@@ -33,7 +33,7 @@ declare namespace __Useragnt {
         edge: boolean;
         ie: boolean;
         safari: boolean;
-        chrome: boolean;
+        chrome: UADetectsBooleanVersion;
         firefox: boolean;
         opera: boolean;
     }

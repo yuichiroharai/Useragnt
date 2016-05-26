@@ -74,7 +74,7 @@ if (Useragnt.pc) {
   //...
 }
 
-// iOS & Android only
+// iOS & Android & Chrome only
 var version;
 if (Useragnt.ios) {
     version = Useragnt.ios.version;
@@ -90,8 +90,15 @@ if (Useragnt.android) {
     console.log("minor:" + version.minor);
     console.log("build:" + version.build);
 }
+if (Useragnt.chrome) {
+    version = Useragnt.chrome.version;
+    console.log("Chrome version: " + version.float); // major.minor
+    console.log("major:" + version.major);
+    console.log("minor:" + version.minor);
+    console.log("build:" + version.build);
+}
 ```
 
 
 ## Example
-http://codepen.io/yuichiroharai/pen/zqjLJL
+http://codepen.io/yuichiroharai/pen/PzYeZg
