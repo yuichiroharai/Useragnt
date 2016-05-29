@@ -75,29 +75,21 @@ if (Useragnt.pc) {
 }
 
 // iOS & Android & Chrome only
-var version;
-if (Useragnt.ios) {
-    version = Useragnt.ios.version;
-    console.log("iOS version: " + version.float); // major.minor
-    console.log("major:" + version.major);
-    console.log("minor:" + version.minor);
-    console.log("build:" + version.build);
-}
-if (Useragnt.android) {
-    version = Useragnt.android.version;
-    console.log("Android version: " + version.float); // major.minor
-    console.log("major:" + version.major);
-    console.log("minor:" + version.minor);
-    console.log("build:" + version.build);
-}
-if (Useragnt.chrome) {
-    version = Useragnt.chrome.version;
-    console.log("Chrome version: " + version.float); // major.minor
-    console.log("major:" + version.major);
-    console.log("minor:" + version.minor);
-    console.log("build:" + version.build);
+if (Useragnt.ios) logVersion(Useragnt.ios.version, "ios");
+if (Useragnt.android) logVersion(Useragnt.android.version, "android");
+if (Useragnt.chrome) logVersion(Useragnt.chrome.version, "chrome");
+
+function logVersion(version, title) {
+  console.log("----- " + title + " -----");
+  console.log("str: " + version.str);
+  console.log("float: " + version.float);
+  console.log("major: " + version.major);
+  console.log("minor: " + version.minor);
+  console.log("build: " + version.build);
+  console.log("revision: " + version.revision);
 }
 ```
+
 
 
 ## Example

@@ -11,6 +11,7 @@
     function v(str) {
         var vs = (str).split(".");
         var result = {};
+        result.str = str;
         result.float = parseFloat(str) || 0;
         result.major = (vs.length > 0) ? parseInt(vs[0]) || 0 : 0;
         result.minor = (vs.length > 1) ? parseInt(vs[1]) || 0 : 0;

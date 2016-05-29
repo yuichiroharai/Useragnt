@@ -1,4 +1,4 @@
-// Type definitions for Useragnt 0.3.0
+// Type definitions for Useragnt 0.3.1
 // Project: https://github.com/yuichiroharai/Useragnt
 // Definitions by: Yuichiroh Arai <https://github.com/yuichiroharai/>
 // Definitions: https://github.com/yuichiroharai/Useragnt
@@ -6,6 +6,7 @@
 declare namespace __Useragnt {
 
     interface UADetectsVersion {
+        str: string;
         float: number;
         major: number;
         minor: number;
