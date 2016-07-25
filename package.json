@@ -1,7 +1,7 @@
 {
   "name": "useragnt",
   "version": "0.3.1",
-  "description": "Useragnt is a JavaScript library that detects device, OS, and browser from Useragent. It behaves like a Modernizr.",
+  "description": "Useragnt is a JavaScript library that detects device, OS, and browser from User agent. It behaves like a Modernizr.",
   "main": "./src/build.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

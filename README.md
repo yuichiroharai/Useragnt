@@ -1,5 +1,5 @@
 # Useragnt
-Useragnt is a JavaScript library that detects device, OS, and browser from Useragent.
+Useragnt is a JavaScript library that detects device, OS, and browser from User agent.
 
 It behaves like a [Modernizr](https://modernizr.com/).
 
