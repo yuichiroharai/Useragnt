@@ -6,7 +6,7 @@ It behaves like a [Modernizr](https://modernizr.com/).
 
 ## Install
 
-[![NPM](https://nodei.co/npm/glsl-strip-comments-loader.png?mini=true)](https://nodei.co/npm/glsl-strip-comments-loader/)
+[![NPM](https://nodei.co/npm/useragnt.png?mini=true)](https://nodei.co/npm/useragnt/)
 
 ## Usage
 
