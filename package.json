@@ -20,8 +20,8 @@
   },
   "homepage": "https://github.com/yuichiroharai/Useragnt#readme",
   "dependencies": {
-    "lodash": "^4.5.1",
-    "uglify-js": "^2.6.2"
+    "lodash": "^4.16.4",
+    "uglify-js": "^2.7.3"
   },
   "private": "true"
 }
