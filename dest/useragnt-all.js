@@ -1,6 +1,6 @@
 /*!
  * Useragnt
- * v0.3.1
+ * v0.4.0
  * 
  * Copyright (c) 2016 Yuichiroh Arai
  * Released under the MIT license

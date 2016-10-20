@@ -6,12 +6,7 @@ It behaves like a [Modernizr](https://modernizr.com/).
 
 ## Install
 
-```sh
-npm install -D https://github.com/yuichiroharai/Useragnt.git
-```
-
-direct npm install is coming soon...
-
+[![NPM](https://nodei.co/npm/glsl-strip-comments-loader.png?mini=true)](https://nodei.co/npm/glsl-strip-comments-loader/)
 
 ## Usage
 
@@ -22,6 +17,7 @@ var fs = require("fs");
 var useragnt = require("useragnt");
 
 var configAll = {
+  "minify": true,
   "classPrefix": "",
   "options": [
     "setClasses"
@@ -45,9 +41,8 @@ var configAll = {
     "opera"
   ]
 }
-var isUglify = true;
 
-var result = useragnt.build(configAll, isUglify);
+var result = useragnt.build(configAll);
 
 fs.writeFileSync("./useragnt.min.js", result);
 ```

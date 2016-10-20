@@ -2,8 +2,9 @@ var fs = require("fs");
 var useragnt = require("../build.js");
 
 var configAll = require("../config-all.json");
-var isUglify = true;
 
-var result = useragnt.build(configAll, isUglify);
+configAll.minify = false;
+fs.writeFileSync("./dest/useragnt-all.js", useragnt.build(configAll));
 
-fs.writeFileSync("./useragnt.min.js", result);
+configAll.minify = true;
+fs.writeFileSync("./dest/useragnt-all.min.js", useragnt.build(configAll));

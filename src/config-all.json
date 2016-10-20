@@ -1,4 +1,5 @@
 {
+  "minify": false,
   "classPrefix": "",
   "options": [
     "setClasses"

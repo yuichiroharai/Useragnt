@@ -15,23 +15,20 @@
 
     var useragnt = {
 
-        build: function(config, isUglify) {
-            var uaDetects, uaDetectsAvailable, options, classPrefix;
+        build: function(config) {
+            var uaDetects, uaDetectsAvailable, options, classPrefix, isMinify;
 
             if (!config) return "";
 
             uaDetects = config["uaDetects"];
             options = config["options"] || [];
             classPrefix = config["classPrefix"];
+            isMinify = !!config.minify;
 
             if (!Array.isArray(uaDetects) || uaDetects.length < 1) return "";
             uaDetectsAvailable = _.intersection(uaDetects, uaDetectsAll);
 
             if (classPrefix === undefined) classPrefix = "";
-
-            isUglify = !!isUglify;
-
-
 
             var i, len, prop, detect, tmpl, tmplSetClasses;
 
@@ -71,7 +68,7 @@
             license += "\n\ndetects: " + uaDetectsAvailable.join(", ");
             license = "/*!\n * " + license.split("\n").join("\n * ") + "\n!*/\n";
 
-            return license + ((isUglify) ? uglify.minify(tmpl, { fromString: true } ).code : tmpl);
+            return license + ((isMinify) ? uglify.minify(tmpl, { fromString: true } ).code : tmpl);
         }
 
     };
