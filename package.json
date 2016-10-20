@@ -23,6 +23,5 @@
   "dependencies": {
     "lodash": "^4.16.4",
     "uglify-js": "^2.7.3"
-  },
-  "private": "true"
+  }
 }
