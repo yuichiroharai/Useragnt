@@ -1,3 +1,3 @@
 Useragnt.webview =
     (m("iphone") || m("ipad") || m("ipod"))
-    && !("fullscreenEnabled" in d || "webkitFullscreenEnabled" in d);
+    && (!m("safari") || m("crios") || m("fxios") || m("twitter") || m("fbav") || m("line"));
