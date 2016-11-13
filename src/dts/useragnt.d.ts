@@ -1,4 +1,4 @@
-// Type definitions for Useragnt 0.4.2
+// Type definitions for Useragnt 0.5.0
 // Project: https://github.com/yuichiroharai/Useragnt
 // Definitions by: Yuichiroh Arai <https://github.com/yuichiroharai/>
 // Definitions: https://github.com/yuichiroharai/Useragnt
@@ -34,9 +34,12 @@ declare namespace __Useragnt {
         edge: boolean;
         ie: boolean;
         safari: boolean;
+        webkit: boolean;
         chrome: UADetectsBooleanVersion;
         firefox: boolean;
         opera: boolean;
+
+        webview: boolean;
     }
 
     export interface UseragntrStatic extends UADetects { }

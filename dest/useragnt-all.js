@@ -1,19 +1,21 @@
 /*!
  * Useragnt
- * v0.4.2
+ * v0.5.0
  * 
  * Copyright (c) 2016 Yuichiroh Arai
  * Released under the MIT license
  * http://opensource.org/licenses/mit-license.php
  * 
- * detects: mobile, tablet, pc, windows, mac, linux, ios, android, edge, ie, safari, chrome, firefox, opera
+ * detects: mobile, tablet, pc, windows, mac, linux, ios, android, edge, ie, safari, webkit, chrome, firefox, opera, webview
 !*/
 ;(function(window, document){
     var Useragnt = {};
 
-    Useragnt._detects = ["mobile", "tablet", "pc", "windows", "mac", "linux", "ios", "android", "edge", "ie", "safari", "chrome", "firefox", "opera"];
+    Useragnt._detects = ["mobile", "tablet", "pc", "windows", "mac", "linux", "ios", "android", "edge", "ie", "safari", "webkit", "chrome", "firefox", "opera", "webview"];
 
     var u = Useragnt.userAgent = window.navigator.userAgent.toLowerCase();
+    var w = window;
+    var d = document;
 
     function m(str) {
         return u.indexOf(str) != -1;
@@ -117,6 +119,10 @@ if (Useragnt.android) {
     Useragnt.safari = m("safari") && !m("android") && !m("edge") && !m("opera") && !m("opr") && !m("chrome");
 
 
+    // webkit
+    Useragnt.webkit = m("applewebkit") && !m("safari") && !m("android") && !m("edge") && !m("opera") && !m("opr") && !m("chrome");
+
+
     // chrome
     Useragnt.chrome = m("chrome") && !m("edge") && !m("opera") && !m("opr");
 if (Useragnt.chrome) {
@@ -132,6 +138,12 @@ if (Useragnt.chrome) {
 
     // opera
     Useragnt.opera = m("opera") || m("opr");
+
+
+    // webview
+    Useragnt.webview =
+    (m("iphone") || m("ipad") || m("ipod"))
+    && !("fullscreenEnabled" in d || "webkitFullscreenEnabled" in d);
 
     // -------------------- setClasses --------------------
     var classPrefix = Useragnt._classPrefix = "";

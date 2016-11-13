@@ -4,6 +4,8 @@
     Useragnt._detects = [$detects];
 
     var u = Useragnt.userAgent = window.navigator.userAgent.toLowerCase();
+    var w = window;
+    var d = document;
 
     function m(str) {
         return u.indexOf(str) != -1;
