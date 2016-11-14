@@ -1,6 +1,6 @@
 {
   "name": "useragnt",
-  "version": "0.5.1",
+  "version": "0.5.2",
   "description": "Useragnt is a JavaScript library that detects device, OS, and browser from User agent. It behaves like a Modernizr.",
   "main": "./src/build.js",
   "scripts": {

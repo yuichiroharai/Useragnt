@@ -1,6 +1,6 @@
 /*!
  * Useragnt
- * v0.5.1
+ * v0.5.2
  * 
  * Copyright (c) 2016 Yuichiroh Arai
  * Released under the MIT license
@@ -143,7 +143,7 @@ if (Useragnt.chrome) {
     // webview
     Useragnt.webview =
     (m("iphone") || m("ipad") || m("ipod"))
-    && (!m("safari") || m("crios") || m("fxios") || m("twitter") || m("fbav") || m("line"));
+    && (!m("safari") || m("crios") || m("fxios") || m("opios") || m("twitter") || m("fbav") || m("line"));
 
     // -------------------- setClasses --------------------
     var classPrefix = Useragnt._classPrefix = "";

@@ -36,9 +36,12 @@ var configAll = {
     "edge",
     "ie",
     "safari",
+    "webkit",
     "chrome",
     "firefox",
-    "opera"
+    "opera",
+
+    "webview"
   ]
 }
 
