@@ -1,6 +1,6 @@
 /*!
  * Useragnt
- * v0.6.0
+ * v0.6.1
  * 
  * Copyright (c) 2016 Yuichiroh Arai
  * Released under the MIT license
@@ -98,7 +98,7 @@ try {
 Useragnt.mac = m("mac os x") && !m("iphone") && !m("ipad") && !m("ipod");
 if (Useragnt.mac) {
     Useragnt.mac = new Boolean(true);
-    if (u.match(/ mac os x ([\d_]+)/g)) Useragnt.mac.version = v(RegExp.$1.replace(/_/g, "."));
+    if (u.match(/ mac os x ([\d_\.]+)/g)) Useragnt.mac.version = v(RegExp.$1.replace(/_/g, "."));
 }
 } catch (e) {}
 
