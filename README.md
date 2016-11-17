@@ -72,10 +72,21 @@ if (Useragnt.pc) {
   //...
 }
 
-// iOS & Android & Chrome only
+// OS version
+if (Useragnt.windows) logVersion(Useragnt.windows.version, "windows");
+if (Useragnt.mac) logVersion(Useragnt.mac.version, "mac");
 if (Useragnt.ios) logVersion(Useragnt.ios.version, "ios");
 if (Useragnt.android) logVersion(Useragnt.android.version, "android");
+
+// Browser version
+if (Useragnt.ie) logVersion(Useragnt.ie.version, "ie");
+if (Useragnt.edge) logVersion(Useragnt.edge.version, "edge");
+if (Useragnt.safari) logVersion(Useragnt.safari.version, "safari");
 if (Useragnt.chrome) logVersion(Useragnt.chrome.version, "chrome");
+if (Useragnt.firefox) logVersion(Useragnt.firefox.version, "firefox");
+if (Useragnt.opera) logVersion(Useragnt.opera.version, "opera");
+
+
 
 function logVersion(version, title) {
   console.log("----- " + title + " -----");

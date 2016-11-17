@@ -39,8 +39,10 @@
                 prop = uaDetectsAvailable[i];
 
                 detect.push("\n");
-                detect.push("    " + "// " + prop);
-                detect.push("    " + readFile("./detects/" + prop + ".js"));
+                detect.push("// " + prop);
+                detect.push("try {");
+                detect.push(readFile("./detects/" + prop + ".js"));
+                detect.push("} catch (e) {}");
             }
 
             tmpl = readFile("./templates/template.js");

@@ -1,4 +1,4 @@
-// Type definitions for Useragnt 0.5.2
+// Type definitions for Useragnt 0.6.0
 // Project: https://github.com/yuichiroharai/Useragnt
 // Definitions by: Yuichiroh Arai <https://github.com/yuichiroharai/>
 // Definitions: https://github.com/yuichiroharai/Useragnt
@@ -25,19 +25,19 @@ declare namespace __Useragnt {
         tablet: boolean;
         pc: boolean;
 
-        windows: boolean;
-        mac: boolean;
+        windows: UADetectsBooleanVersion;
+        mac: UADetectsBooleanVersion;
         linux: boolean;
         ios: UADetectsBooleanVersion;
         android: UADetectsBooleanVersion;
 
-        edge: boolean;
-        ie: boolean;
-        safari: boolean;
+        edge: UADetectsBooleanVersion;
+        ie: UADetectsBooleanVersion;
+        safari: UADetectsBooleanVersion;
         webkit: boolean;
         chrome: UADetectsBooleanVersion;
-        firefox: boolean;
-        opera: boolean;
+        firefox: UADetectsBooleanVersion;
+        opera: UADetectsBooleanVersion;
 
         webview: boolean;
     }

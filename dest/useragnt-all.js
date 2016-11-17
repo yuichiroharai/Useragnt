@@ -1,6 +1,6 @@
 /*!
  * Useragnt
- * v0.5.2
+ * v0.6.0
  * 
  * Copyright (c) 2016 Yuichiroh Arai
  * Released under the MIT license
@@ -35,18 +35,21 @@
     // -------------------- ua-detects --------------------
 
 
-    // mobile
-    Useragnt.mobile =
+// mobile
+try {
+Useragnt.mobile =
     m("iphone")
     || m("ipod")
     || (m("android") && m("mobile"))
     || (m("windows") && m("phone"))
     || (m("firefox") && m("mobile"))
     || m("blackberry");
+} catch (e) {}
 
 
-    // tablet
-    Useragnt.tablet =
+// tablet
+try {
+Useragnt.tablet =
     m("ipad")
     || (m("android") && !m("mobile"))
     || (m("windows") && m("touch") && !m("tablet pc"))
@@ -54,10 +57,12 @@
     || m("kindle")
     || m("silk")
     || m("playbook");
+} catch (e) {}
 
 
-    // pc
-    Useragnt.pc =
+// pc
+try {
+Useragnt.pc =
     !m("iphone")
     && !m("ipod")
     && !m("ipad")
@@ -75,75 +80,127 @@
     && !m("kindle")
     && !m("silk")
     && !m("playbook");
+} catch (e) {}
 
 
-    // windows
-    Useragnt.windows = m("windows");
+// windows
+try {
+Useragnt.windows = m("windows");
+if (Useragnt.windows) {
+    Useragnt.windows = new Boolean(true);
+    if (u.match(/nt ([\d.]+)/g)) Useragnt.windows.version = v(RegExp.$1);
+}
+} catch (e) {}
 
 
-    // mac
-    Useragnt.mac = m("mac os x") && !m("iphone") && !m("ipad") && !m("ipod");
+// mac
+try {
+Useragnt.mac = m("mac os x") && !m("iphone") && !m("ipad") && !m("ipod");
+if (Useragnt.mac) {
+    Useragnt.mac = new Boolean(true);
+    if (u.match(/ mac os x ([\d_]+)/g)) Useragnt.mac.version = v(RegExp.$1.replace(/_/g, "."));
+}
+} catch (e) {}
 
 
-    // linux
-    Useragnt.linux = m("linux") && !m("android");
+// linux
+try {
+Useragnt.linux = m("linux") && !m("android");
+} catch (e) {}
 
 
-    // ios
-    Useragnt.ios = m("iphone") || m("ipad") || m("ipod");
+// ios
+try {
+Useragnt.ios = m("iphone") || m("ipad") || m("ipod");
 if (Useragnt.ios) {
     Useragnt.ios = new Boolean(true);
-    u.match(/ os ([\d_]+)/g);
-    Useragnt.ios.version = v(RegExp.$1.replace("_", "."));
+    if (u.match(/ os ([\d_]+)/g)) Useragnt.ios.version = v(RegExp.$1.replace(/_/g, "."));
 }
+} catch (e) {}
 
 
-    // android
-    Useragnt.android = m("android");
+// android
+try {
+Useragnt.android = m("android");
 if (Useragnt.android) {
     Useragnt.android = new Boolean(true);
-    u.match(/android ([\d\.]+)/g);
-    Useragnt.android.version = v(RegExp.$1);
+    if (u.match(/android ([\d\.]+)/g)) Useragnt.android.version = v(RegExp.$1);
 }
+} catch (e) {}
 
 
-    // edge
-    Useragnt.edge = m("edge");
+// edge
+try {
+Useragnt.edge = m("edge");
+if (Useragnt.edge) {
+    Useragnt.edge = new Boolean(true);
+    if (u.match(/edge\/([\d.]+)/g)) Useragnt.edge.version = v(RegExp.$1);
+}
+} catch (e) {}
 
 
-    // ie
-    Useragnt.ie = m("trident") || m("msie");
+// ie
+try {
+Useragnt.ie = m("trident") || m("msie");
+if (Useragnt.ie) {
+    Useragnt.ie = new Boolean(true);
+    if (u.match(/(msie|rv:?)\s?([\d.]+)/g)) Useragnt.ie.version = v(RegExp.$2);
+}
+} catch (e) {}
 
 
-    // safari
-    Useragnt.safari = m("safari") && !m("android") && !m("edge") && !m("opera") && !m("opr") && !m("chrome");
+// safari
+try {
+Useragnt.safari = m("safari") && !m("android") && !m("edge") && !m("opera") && !m("opr") && !m("chrome");
+if (Useragnt.safari) {
+    Useragnt.safari = new Boolean(true);
+    if (u.match(/version\/([\d.]+)/g)) Useragnt.safari.version = v(RegExp.$1);
+}
+} catch (e) {}
 
 
-    // webkit
-    Useragnt.webkit = m("applewebkit") && !m("safari") && !m("android") && !m("edge") && !m("opera") && !m("opr") && !m("chrome");
+// webkit
+try {
+Useragnt.webkit = m("applewebkit") && !m("safari") && !m("android") && !m("edge") && !m("opera") && !m("opr") && !m("chrome");
+} catch (e) {}
 
 
-    // chrome
-    Useragnt.chrome = m("chrome") && !m("edge") && !m("opera") && !m("opr");
+// chrome
+try {
+Useragnt.chrome = m("chrome") && !m("edge") && !m("opera") && !m("opr");
 if (Useragnt.chrome) {
     Useragnt.chrome = new Boolean(true);
-    u.match(/chrome\/([\d.]+)/g);
-    Useragnt.chrome.version = v(RegExp.$1);
+    if (u.match(/chrome\/([\d.]+)/g)) Useragnt.chrome.version = v(RegExp.$1);
 }
+} catch (e) {}
 
 
-    // firefox
-    Useragnt.firefox = m("firefox") && !m("edge");
+// firefox
+try {
+Useragnt.firefox = m("firefox") && !m("edge");
+if (Useragnt.firefox) {
+    Useragnt.firefox = new Boolean(true);
+    if (u.match(/firefox\/([\d.]+)/g)) Useragnt.firefox.version = v(RegExp.$1);
+}
+} catch (e) {}
 
 
-    // opera
-    Useragnt.opera = m("opera") || m("opr");
+// opera
+try {
+Useragnt.opera = m("opera") || m("opr");
+if (Useragnt.opera) {
+    Useragnt.opera = new Boolean(true);
+    if (u.match(/(opera|opr)\/([\d.]+)/g)) Useragnt.opera.version = v(RegExp.$2);
+}
+} catch (e) {}
 
 
-    // webview
-    Useragnt.webview =
+// webview
+try {
+Useragnt.webview =
     (m("iphone") || m("ipad") || m("ipod"))
     && (!m("safari") || m("crios") || m("fxios") || m("opios") || m("twitter") || m("fbav") || m("line"));
+} catch (e) {}
 
     // -------------------- setClasses --------------------
     var classPrefix = Useragnt._classPrefix = "";
