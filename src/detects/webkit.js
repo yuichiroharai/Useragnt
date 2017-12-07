@@ -1,1 +1,1 @@
-Useragnt.webkit = m("applewebkit") && !m("safari") && !m("android") && !m("edge") && !m("opera") && !m("opr") && !m("chrome");
+Useragnt.webkit = m("applewebkit") && !m("safari") && !m("android") && !m("edge") && !m("opera") && !m("opr/d+.d+") && !m("chrome");

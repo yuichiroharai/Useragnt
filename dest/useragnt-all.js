@@ -1,8 +1,8 @@
 /*!
  * Useragnt
- * v0.6.1
+ * v0.6.2
  * 
- * Copyright (c) 2016 Yuichiroh Arai
+ * Copyright (c) 2017 Yuichiroh Arai
  * Released under the MIT license
  * http://opensource.org/licenses/mit-license.php
  * 
@@ -151,7 +151,7 @@ if (Useragnt.ie) {
 
 // safari
 try {
-Useragnt.safari = m("safari") && !m("android") && !m("edge") && !m("opera") && !m("opr") && !m("chrome");
+Useragnt.safari = m("safari") && !m("android") && !m("edge") && !m("opera") && !m("opr/d+.d+") && !m("chrome");
 if (Useragnt.safari) {
     Useragnt.safari = new Boolean(true);
     if (u.match(/version\/([\d.]+)/g)) Useragnt.safari.version = v(RegExp.$1);
@@ -161,13 +161,13 @@ if (Useragnt.safari) {
 
 // webkit
 try {
-Useragnt.webkit = m("applewebkit") && !m("safari") && !m("android") && !m("edge") && !m("opera") && !m("opr") && !m("chrome");
+Useragnt.webkit = m("applewebkit") && !m("safari") && !m("android") && !m("edge") && !m("opera") && !m("opr/d+.d+") && !m("chrome");
 } catch (e) {}
 
 
 // chrome
 try {
-Useragnt.chrome = m("chrome") && !m("edge") && !m("opera") && !m("opr");
+Useragnt.chrome = m("chrome") && !m("edge") && !m("opera") && !m("opr\/d+.d+");
 if (Useragnt.chrome) {
     Useragnt.chrome = new Boolean(true);
     if (u.match(/chrome\/([\d.]+)/g)) Useragnt.chrome.version = v(RegExp.$1);
@@ -187,7 +187,7 @@ if (Useragnt.firefox) {
 
 // opera
 try {
-Useragnt.opera = m("opera") || m("opr");
+Useragnt.opera = m("opera") || m("opr\/d+.d+");
 if (Useragnt.opera) {
     Useragnt.opera = new Boolean(true);
     if (u.match(/(opera|opr)\/([\d.]+)/g)) Useragnt.opera.version = v(RegExp.$2);
